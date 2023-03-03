@@ -1,6 +1,10 @@
 let pokeSelector = document.getElementById("pokemonselector")
 const altaPokedex = document.getElementById("altapokedex")
 const bajaPokedex = document.getElementById("bajapokedex")
+let nameCell = document.getElementById("tdname")
+let typesCell = document.getElementById("tdtypes")
+let heightCell = document.getElementById("tdheight")
+let weightCell = document.getElementById("tdweight")
 
 pokeSelector.addEventListener("change" , chargePokemon)
 
@@ -28,6 +32,10 @@ function chargePokemon(){
 
 
     altaPokedex.innerHTML = ""
+    nameCell.innerHTML=""
+    typesCell.innerHTML=""
+    heightCell.innerHTML=""
+    weightCell.innerHTML=""
 
     let id = pokeSelector.value
     id++
@@ -41,13 +49,11 @@ function chargePokemon(){
         sprite.id = "imgid"
         let nameP = document.createElement("p")
         nameP.textContent = capitalFirst(data.name)
-
+        nameP.textContent = "#" + id + " " + nameP.textContent
         let typeP = document.createElement("p")
 
-
-
         typeP.innerHTML = "Types: "
-        console.log(data.past_types)
+
         if(data.past_types.length > 0){
 
         data.past_types.forEach(element => {
@@ -71,10 +77,10 @@ function chargePokemon(){
         wheightP.textContent = "Weight: " + data.weight
 
         altaPokedex.appendChild(sprite)
-        bajaPokedex.appendChild(nameP)
-        bajaPokedex.appendChild(typeP)
-        bajaPokedex.appendChild(heigthP)
-        bajaPokedex.appendChild(wheightP)
+        nameCell.appendChild(nameP)
+        typesCell.appendChild(typeP)
+        heightCell.appendChild(heigthP)
+        weightCell.appendChild(wheightP)
 })
 }
 
