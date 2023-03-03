@@ -33,9 +33,11 @@ td{
     margin-top: -30%;
 }
 #tdname{
-    font-size:xx-large;
+    font-size:20px;
     font-weight: 1000;
+    font-family: "pokemon_gbregular";
 }
 #tdtypes,#tdheight,#tdweight{
-    font-size: large;
+    font-size: 12px;
+    font-family: "pokemon_gbregular";
 }
