@@ -36,7 +36,7 @@ td{
 }
 #bajapokedex{
     width: 100%;
-    margin-top: -30%;
+    height: 100%;
 }
 #tdname{
     font-size:20px;
@@ -44,6 +44,7 @@ td{
     font-family: "pokemon_gbregular";
 }
 #tdtypes,#tdheight,#tdweight{
-    font-size: 12px;
+    line-height: 30px;
+    font-size: 14px;
     font-family: "pokemon_gbregular";
 }
